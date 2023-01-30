@@ -13,7 +13,7 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
             return String.format("Anusha's String: %s", start);
         } else if (url.getPath().equals("/search")) {
-            String[] parameters = url.getQuery().split("=");
+            //String[] parameters = url.getQuery().split("=");
             for (String element : list){
                 if (element.contains(parameters[1])){
                     System.out.println(element);
