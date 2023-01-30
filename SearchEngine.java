@@ -20,7 +20,7 @@ class Handler implements URLHandler {
 
             }
             //return String.format("Number incremented!");
-        //} 
+        } 
         else {
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
