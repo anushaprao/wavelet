@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
-import java.util.Iterator;
+//import java.util.Iterator;
 
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
@@ -13,14 +13,14 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
             return String.format("Anusha's String: %s", start);
         } else if (url.getPath().equals("/search")) {
-            //String[] parameters = url.getQuery().split("=");
+            String[] parameters = url.getQuery().split("=");
             for (String element : list){
                 if (element.contains(parameters[1])){
                     System.out.println(element);
                 }
 
             }
-            //return String.format("Number incremented!");
+            return String.format("Number incremented!");
         } 
         else {
             System.out.println("Path: " + url.getPath());
